@@ -68,10 +68,10 @@ Make sure to set these environment variables in your Vercel project settings:
 |----------|-------------|---------|----------|
 | `NODE_ENV` | Environment mode | `production` | Yes |
 | `CORS_ORIGIN` | Allowed CORS origin | - | Yes |
-| `HOST` | Server host | `0.0.0.0` | No |
-| `PORT` | Server port | `3000` | No |
 | `COMMON_RATE_LIMIT_WINDOW_MS` | Rate limit window (ms) | `1000` | No |
 | `COMMON_RATE_LIMIT_MAX_REQUESTS` | Max requests per window | `20` | No |
+
+**Note:** `HOST` and `PORT` are not required for Vercel deployment as Vercel automatically handles host binding and port assignment for serverless functions.
 
 ## Testing Locally with Vercel CLI
 
