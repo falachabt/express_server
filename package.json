@@ -17,6 +17,7 @@
 	},
 	"dependencies": {
 		"@asteasolutions/zod-to-openapi": "7.3.4",
+		"@blocknote/server-util": "^0.41.1",
 		"cors": "2.8.5",
 		"dotenv": "17.2.1",
 		"express": "5.1.0",
