@@ -2,6 +2,7 @@ import cors from "cors";
 import express, { type Express } from "express";
 import helmet from "helmet";
 import { pino } from "pino";
+import { blocknoteRouter } from "@/api/blocknote/blocknoteRouter";
 import { healthCheckRouter } from "@/api/healthCheck/healthCheckRouter";
 import { userRouter } from "@/api/user/userRouter";
 import { openAPIRouter } from "@/api-docs/openAPIRouter";
@@ -29,6 +30,7 @@ app.use(requestLogger);
 // Routes
 app.use("/health-check", healthCheckRouter);
 app.use("/users", userRouter);
+app.use("/blocknote", blocknoteRouter);
 
 // Swagger UI
 app.use(openAPIRouter);
