@@ -3,9 +3,18 @@ import { z } from "zod";
 
 extendZodWithOpenApi(z);
 
-// BlockNote block type - simplified representation
+// BlockNote block type - uses z.any() to allow flexible block structure
+// as BlockNote blocks have a complex, extensible schema that varies by block type.
+// The ServerBlockNoteEditor handles internal validation of block structure.
 export const BlockSchema = z.any().openapi({
-	description: "BlockNote block structure",
+	description:
+		"BlockNote block structure with id, type, content, and props. BlockNote blocks have a dynamic schema that varies by block type and is validated by the ServerBlockNoteEditor.",
+	example: {
+		id: "block-id",
+		type: "paragraph",
+		content: [{ type: "text", text: "Hello World", styles: {} }],
+		props: {},
+	},
 });
 
 export type Block = z.infer<typeof BlockSchema>;
