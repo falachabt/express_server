@@ -1,0 +1,12 @@
+node_modules
+.env
+.env.template
+.git
+.github
+.vscode
+coverage
+*.log
+.DS_Store
+README.md
+Dockerfile
+pnpm-lock.yaml
