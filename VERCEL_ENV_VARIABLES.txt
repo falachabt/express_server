@@ -1,0 +1,36 @@
+================================================
+VERCEL ENVIRONMENT VARIABLES - COPY & PASTE
+================================================
+
+Copy these to Vercel Dashboard:
+Project → Settings → Environment Variables → Add for each
+
+------------------------------------------------
+REQUIRED - Minimum to get started:
+------------------------------------------------
+
+Variable Name: CORS_ORIGIN
+Value: *
+
+(Note: Use * for testing. For production, replace with your actual frontend URL like https://yourdomain.com)
+
+------------------------------------------------
+OPTIONAL - Rate Limiting (recommended):
+------------------------------------------------
+
+Variable Name: COMMON_RATE_LIMIT_WINDOW_MS
+Value: 1000
+
+Variable Name: COMMON_RATE_LIMIT_MAX_REQUESTS
+Value: 20
+
+------------------------------------------------
+
+After adding variables:
+1. Save each variable
+2. Redeploy your application (Deployments → ⋯ → Redeploy)
+
+Test URLs (replace YOUR_APP with your Vercel app name):
+- https://YOUR_APP.vercel.app/health-check
+- https://YOUR_APP.vercel.app/
+- https://YOUR_APP.vercel.app/users
